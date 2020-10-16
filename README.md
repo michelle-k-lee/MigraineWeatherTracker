@@ -4,6 +4,12 @@ __Overview:__ Track migraine weather triggers including low barometric pressure 
 
 ## Purpose
 
+Migraines are common, but are an uncomfortable and often recurring issue.
+According to the UK NHS,
+>Migraine is a common health condition, affecting around 1 in every 5 women and around 1 in every 15 men.
+
+Some people's migraines are triggered by certain weather conditions (like in my case), and I wanted to be able to easily track those particular weather-related triggers.
+
 I created an ambient migraine tracker that incorporates atmospheric pressure info from the MPL115A2 temperature + pressure sensor connected to an ESP8266 with cloud cover percentage information gathered from the OpenWeatherMap API. I combined the collected information to create an informative ambient light display to warn me if migraine weather conditions were present.
 <br /><br />
 
