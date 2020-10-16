@@ -20,9 +20,9 @@ This information is also reported to a MQTT feed (topic/feed; if you're interest
 
 ## Hardware Setup
 
-For reference, this is the breadboard hardware setup corresponding to the C++ code. 
+For reference, this is the breadboard hardware setup corresponding to the C++ code: 
 
-![Hardware Setup](drop url here)
+![Hardware Setup](https://raw.githubusercontent.com/michelle-k-lee/MigraineWeatherTracker/master/MigraineTracker_Breadboard.png)
 
 If you're looking to newly purchase these components, they likely can be found on [Adafruit](https://www.adafruit.com) or [DigiKey](https://www.digikey.com).
 <br /><br />
@@ -34,10 +34,17 @@ Please be sure to download and install any Arduino libraries that you don't alre
 
 Additionally, make sure that if you want to make use of the Arduino IDE's serial monitor, match the baud of your serial monitor settings to that in the code (115200).
 
+Make sure you replace the placeholder text with your own OpenWeather API key and location information here:
+`weatherClient.begin("http://api.openweathermap.org/data/2.5/weather?zip=yourZipgoeshere,US&appid=yourAPIkeygoeshere");`
+
+For example, if your zip code was 12345 and your API key was 9876Lotsofdata, you would change the above to: 
+`weatherClient.begin("http://api.openweathermap.org/data/2.5/weather?zip=12345,US&appid=9876Lotsofdata");`
+
+For more specific details, have a look at the commented code!
+
 ### For the config.h File:
 Be sure to add your own WiFi credentials and MQTT server credentials in the config.h file to replace placeholders!
 For example, if your WiFi network name was FastestWiFi, you would change `#define wifi_ssid "YourWiFiNetwork"` to `#define wifi_ssid "FastestWiFi"`.
-
 
 ### OpenWeather API Documentation
 Official OpenWeatherAPI documentation can be found here if you want to incorporate additional weather information or just want to learn more: 
